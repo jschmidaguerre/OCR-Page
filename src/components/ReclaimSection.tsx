@@ -1,4 +1,5 @@
 import { Button } from '@/components/ui/button'
+import Link from 'next/link'
 
 export default function ReclaimSection() {
   return (
@@ -17,9 +18,11 @@ export default function ReclaimSection() {
             No more time-wasted on data entry.
           </p>
           <div className="flex flex-col items-center justify-center gap-4 sm:flex-row">
-            <Button size="lg" variant="secondary">
-              Book a demo
-            </Button>
+            <Link href="/booking">
+                <Button size="lg" variant="secondary">
+                Book a demo
+                </Button>
+            </Link>
             <Button
               size="lg"
               variant="outline"

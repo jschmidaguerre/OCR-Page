@@ -54,9 +54,10 @@ export default function UseCases() {
           </div>
         </Card>
       </div>
-      <div className="mt-8 text-center">
-        <Button size="lg">Explore Use Cases</Button>
-      </div>
+      <div className="text-center my-8">
+        <h3>And Many More...</h3>
+    </div>
+
     </section>
   )
 }

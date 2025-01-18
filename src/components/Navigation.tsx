@@ -1,4 +1,5 @@
 import { Button } from '@/components/ui/button'
+import Link from 'next/link'
 
 export default function Navigation() {
   return (
@@ -13,8 +14,9 @@ export default function Navigation() {
           </div>
         </div>
         <div className="ml-auto flex items-center space-x-4">
-          
-          <Button>Request demo</Button>
+          <Link href="/booking">
+            <Button>Request demo</Button>
+          </Link>
         </div>
       </nav>
     </header>
