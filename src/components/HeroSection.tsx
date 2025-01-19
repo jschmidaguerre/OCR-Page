@@ -3,6 +3,7 @@ import { Button } from '@/components/ui/button'
 
 export default function HeroSection() {
   return (
+ 
     <section className="container mx-auto px-4 py-16 text-center">
 
       <h1 className="mb-6 text-4xl font-bold tracking-tight sm:text-5xl md:text-6xl">
@@ -27,7 +28,7 @@ export default function HeroSection() {
             </Button>
         </Link>
       </div>
-      
+
     </section>
   )
 }

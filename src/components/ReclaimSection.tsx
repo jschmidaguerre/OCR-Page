@@ -23,13 +23,14 @@ export default function ReclaimSection() {
                 Book a demo
                 </Button>
             </Link>
+            {/* ANALIZAR QUE PONEMOS ACA
             <Button
               size="lg"
               variant="outline"
               className="bg-transparent text-white hover:bg-white/10"
             >
               Talk to us
-            </Button>
+            </Button>*/}
           </div>
         </div>
       </div>

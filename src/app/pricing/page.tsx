@@ -7,7 +7,7 @@ export default function PricingPage() {
   return (
     <main>
     <Navigation/>
-    <div className="container mx-auto px-4">
+    <div className="container mx-auto px-4 my-4">
    
       {/* Heading */}
       <div className="mb-12 text-center">
