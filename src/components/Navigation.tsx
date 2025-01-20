@@ -6,6 +6,7 @@ import { Button } from "@/components/ui/button"
 // Optionally, use any icon library you prefer:
 import { Menu, X } from "lucide-react"
 
+
 export default function Navigation() {
   const [isOpen, setIsOpen] = useState(false)
 
