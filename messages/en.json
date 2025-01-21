@@ -1,0 +1,74 @@
+{
+  "NavigationMenu": {
+    "product": "Product",
+    "use-cases": "Use Cases",
+    "pricing": "Pricing",
+    "request-demo": "Request Demo"
+  },
+  "HeroSection": {
+    "title": "Made By Developers, ",
+    "title2": "For Developers.",
+    "description": "Reduces operating costs. Save valuable time. Avoid fraud.",
+    "button": "Book a Call",
+    "button2": "Use Cases"
+  },
+  "BenefitsGrid": {
+    "title1": "Reduce response time by 90%",
+    "description1": "Dramatically reduce response times by processing documents in 5 seconds, not minutes.",
+    "title2": "Save up to 80% in operational costs",
+    "description2": "Eliminate data entry and reduce administrative costs by up to 80% with automation.",
+    "title3": "Maximize your team's efficiency",
+    "description3": "Empower your team to focus on strategic tasks by automating repetitive tasks.",
+    "title4": "Detect fraud and ensure compliance",
+    "description4": "Protect your business from invoice, identity, and expense fraud with intelligent algorithms."
+  },
+  "UseCases": {
+    "title": "Use Cases",
+    "title1": "Hospitalization & Medical Forms",
+    "description1": "Automate the processing of hospitalization and medical forms, reducing response times by 90% and saving up to 80% in operational costs.",
+    "title2": "Invoice Processing",
+    "description2": "Automate the processing of invoices, reducing response times by 90% and saving up to 80% in operational costs.",
+    "title3": "Identity Verification",
+    "description3": "Automate the processing of identity verification, reducing response times by 90% and saving up to 80% in operational costs.",
+    "title4": "Legal & Compliance Documents",
+    "description4": "Automate the processing of legal and compliance documents, reducing response times by 90% and saving up to 80% in operational costs.",
+    "title5": "And Many More...",
+    "description5": "Explore our wide range of use cases and find the one that best suits your needs."
+  },
+  "ComparisonSection": {
+    "title": "We Ensure You",
+    "title-span": "Get Accurate Data",
+    "title2": "from Your Documents",
+    "description": "Our AI-powered OCR technology ensures that you get accurate data from your documents, no matter what type of document you're processing.",
+    "without": "Without Our Solution",
+    "with": "With Our Solution",
+    "without1": "Wasting time on manual data entry & error correction tasks",
+    "without2": "Difficulty in handling multi-language documents",
+    "without3": "Costly to scale document processing with high efficiency",
+    "without4": "Poor quality scans and images cannot be extracted",
+    "without5": "No automated document extraction workflows",
+    "with1": "Process documents in seconds with AI-powered OCR",
+    "with2": "Get structured data extracted from any document",
+    "with3": "Save money and time with batch processing",
+    "with4": "Detect document fraud with AI technologies",
+    "with5": "Automate the entire document processing workflow"
+  },
+  "ReclaimSection": {
+    "title": "Reclaim Your Time and Money with",
+    "title-span": "AI-powered document OCR",
+    "description": "Empower your teams with automated data extraction for any document workflow. No more time-wasted on data entry.",
+    "button": "Book a demo"
+  },
+  "LocaleLayout": {
+    "title": "next-intl example"
+  },
+  "LocaleSwitcher": {
+    "label": "Change language",
+    "locale": "{locale, select, es {🇪🇸 Español} en {🇺🇸 English} other {Unknown}}"
+  },
+  "DropdownMenuRadioGroupDemo": {
+    "select-language": "Select Language",
+    "english": "English",
+    "spanish": "Spanish"
+  }
+}

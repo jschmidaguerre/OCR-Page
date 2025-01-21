@@ -1,12 +1,14 @@
 import Image from 'next/image'
 import { Card } from '@/components/ui/card'
 import { Button } from '@/components/ui/button'
+import { useTranslations } from 'next-intl'
 
 export default function UseCases() {
+  const t = useTranslations('UseCases');
   return (
     <section className="container mx-auto px-4 py-16" id='usecases'>
       <div className="mb-12 text-center">
-        <h2 className="mb-4 text-3xl font-bold">Use Cases</h2>
+        <h2 className="mb-4 text-3xl font-bold">{t('title')}</h2>
       </div>
       <div className="grid gap-8 md:grid-cols-3">
         {/* Hospitalization & Medical Forms */}
@@ -20,7 +22,7 @@ export default function UseCases() {
             />
           </div>
           <div className="p-6">
-            <h3 className="mb-2 text-xl font-bold">Hospitalization & Medical Forms</h3>
+            <h3 className="mb-2 text-xl font-bold">{t('title1')}</h3>
           </div>
         </Card>
 
@@ -35,7 +37,7 @@ export default function UseCases() {
             />
           </div>
           <div className="p-6">
-            <h3 className="mb-2 text-xl font-bold">Financial & Invoice Processing</h3>
+            <h3 className="mb-2 text-xl font-bold">{t('title2')}</h3>
           </div>
         </Card>
 
@@ -50,12 +52,12 @@ export default function UseCases() {
             />
           </div>
           <div className="p-6">
-            <h3 className="mb-2 text-xl font-bold">Legal & Compliance Documents</h3>
+            <h3 className="mb-2 text-xl font-bold">{t('title3')}</h3>
           </div>
         </Card>
       </div>
       <div className="text-center my-8">
-        <h3>And Many More...</h3>
+        <h3>{t('title5')}</h3>
     </div>
 
     </section>

@@ -5,8 +5,11 @@ import Link from "next/link"
 import { Button } from "@/components/ui/button"
 // Optionally, use any icon library you prefer:
 import { Menu, X } from "lucide-react"
+import { DropdownMenuRadioGroupDemo } from "./DropdownMenuRadioGroupDemo"
+import { useTranslations } from "next-intl"
 
 export default function Navigation() {
+  const t = useTranslations('NavigationMenu');
   const [isOpen, setIsOpen] = useState(false)
 
   const toggleMenu = () => {
@@ -27,27 +30,30 @@ export default function Navigation() {
               href="/product"
               className="text-gray-600 transition-colors hover:text-gray-900"
             >
-              Product
+              {t('product')}
             </a>
             <a
               href="/#usecases"
               className="text-gray-600 transition-colors hover:text-gray-900"
             >
-              Use Cases
+              {t('use-cases')}
             </a>
             <a
               href="/pricing"
               className="text-gray-600 transition-colors hover:text-gray-900"
             >
-              Pricing
+              {t('pricing')}
             </a>
           </div>
         </div>
 
         {/* Request Demo (Right-aligned) */}
         <div className="ml-auto flex items-center space-x-4">
+
+          <DropdownMenuRadioGroupDemo />
+          
           <Link href="/booking">
-            <Button>Request demo</Button>
+            <Button>{t('request-demo')}</Button>
           </Link>
 
           {/* Hamburger Button (Mobile Only) */}
@@ -73,21 +79,21 @@ export default function Navigation() {
                 className="block text-gray-700 transition-colors hover:text-gray-900"
                 onClick={toggleMenu}
               >
-                Product
+                {t('product')}
               </a>
               <a
                 href="/#usecases"
                 className="block text-gray-700 transition-colors hover:text-gray-900"
                 onClick={toggleMenu}
               >
-                Use Cases
+                {t('use-cases')}
               </a>
               <a
                 href="/pricing"
                 className="block text-gray-700 transition-colors hover:text-gray-900"
                 onClick={toggleMenu}
               >
-                Pricing
+                {t('pricing')}
               </a>
             </div>
           </div>
