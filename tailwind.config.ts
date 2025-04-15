@@ -9,6 +9,9 @@ export default {
   ],
   theme: {
   	extend: {
+		textBoxTrim: {
+			'trim-both': { 'text-box-trim': 'trim-both' },
+		},
   		colors: {
   			background: 'hsl(var(--background))',
   			foreground: 'hsl(var(--foreground))',

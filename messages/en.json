@@ -70,5 +70,10 @@
     "select-language": "Select Language",
     "english": "English",
     "spanish": "Spanish"
+  },
+  "OCRSection": {
+    "title": "Transform every document into precise data.",
+    "subtitle": "Regardless of layout, our OCR technology converts any document into a structured set of fields and values.",
+    "description": "Unleash the power of artificial intelligence to transform everything from handwritten notes and complex tables to checkboxes and elaborate formats. With custom definitions, we extract exactly the information you need to drive your business."
   }
 }

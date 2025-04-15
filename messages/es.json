@@ -1,63 +1,63 @@
 {
   "NavigationMenu": {
-    "product": "Producto",
-    "use-cases": "Casos de uso",
-    "pricing": "Precios",
-    "request-demo": "Solicitar Demo"
+    "product": "Metodología",
+    "use-cases": "Industrias",
+    "pricing": "Proceso",
+    "request-demo": "Contáctanos"
   },
   "HeroSection": {
-    "title": "Hecho por desarrolladores, ",
-    "title2": "para desarrolladores.",
-    "description": "Reducir costos operativos. Ahorrar tiempo valioso. Evitar fraudes.",
-    "button": "Solicitar una llamada",
-    "button2": "Casos de uso"
+    "title": "Optimizamos tus procesos. ",
+    "title2": "Soluciones a medida para tu negocio.",
+    "description": "Escuchamos. Analizamos. Resolvemos. Optimizamos costos y potenciamos ventas.",
+    "button": "Contáctanos",
+    "button2": "Conoce nuestra metodología"
   },
   "BenefitsGrid": {
-    "title1": "Reducir tiempo de respuesta en un 90%",
-    "description1": "Reducir tiempos de respuesta en un 90% procesando documentos en 5 segundos, no en minutos.",
-    "title2": "Ahorrar hasta un 80% en costos operativos",
-    "description2": "Eliminar entrada de datos y reducir costos operativos en un 80% con automatización.",
-    "title3": "Maximizar la eficiencia de tu equipo",
-    "description3": "Empoderar tu equipo para enfocarse en tareas estratégicas automatizando tareas repetitivas.",
-    "title4": "Detectar fraudes y asegurar cumplimiento",
-    "description4": "Proteger tu negocio de fraudes de facturas, identidad y gastos con algoritmos inteligentes."
+    "title1": "Diagnóstico personalizado de procesos",
+    "description1": "Identificamos cuellos de botella y áreas de oportunidad en tus procesos actuales mediante análisis detallado.",
+    "title2": "Soluciones diseñadas a la medida",
+    "description2": "Desarrollamos propuestas específicas para tus necesidades, no soluciones genéricas.",
+    "title3": "Implementación orientada a resultados",
+    "description3": "Acompañamos la transición y medimos el impacto real en términos de ahorro y eficiencia.",
+    "title4": "Optimización continua",
+    "description4": "Evaluamos constantemente el desempeño para garantizar mejoras sostenibles a largo plazo."
   },
   "UseCases": {
-    "title": "Casos de uso",
-    "title1": "Hospitalización y Formularios Médicos",
-    "description1": "Automatizar el procesamiento de hospitalizaciones y formularios médicos, reduciendo tiempos de respuesta en un 90% y ahorrando hasta un 80% en costos operativos.",
-    "title2": "Procesamiento de Facturas",
-    "description2": "Automatizar el procesamiento de facturas, reduciendo tiempos de respuesta en un 90% y ahorrando hasta un 80% en costos operativos.",
-    "title3": "Verificación de Identidad",
-    "description3": "Automatizar la verificación de identidad, reduciendo tiempos de respuesta en un 90% y ahorrando hasta un 80% en costos operativos.",
-    "title4": "Documentos Legales y de Cumplimiento",
-    "description4": "Automatizar el procesamiento de documentos legales y de cumplimiento, reduciendo tiempos de respuesta en un 90% y ahorrando hasta un 80% en costos operativos.",
-    "title5": "Y muchos más...",
-    "description5": "Explora nuestra amplia gama de casos de uso y encuentra el que mejor se adapte a tus necesidades."
+    "title": "Industrias que transformamos",
+    "title1": "Sector Salud",
+    "description1": "Optimizamos flujos de trabajo clínicos y administrativos para reducir costos operativos y mejorar la atención al paciente.",
+    "title2": "Servicios Financieros",
+    "description2": "Agilizamos procesos de aprobación y detección de fraudes para incrementar eficiencia y reducir riesgos.",
+    "title3": "Manufactura",
+    "description3": "Mejoramos cadenas de suministro y control de calidad para minimizar desperdicios y maximizar productividad.",
+    "title4": "Servicios Profesionales",
+    "description4": "Automatizamos tareas administrativas para que los profesionales dediquen más tiempo a actividades de alto valor.",
+    "title5": "¿Tu industria?",
+    "description5": "Nuestro enfoque consultivo se adapta a cualquier sector. Cuéntanos tus desafíos y desarrollaremos una solución específica."
   },
   "ComparisonSection": {
-    "title": "Nos aseguramos de que obtengas",
-    "title-span": "Datos Precisos",
-    "title2": "de tus documentos",
-    "description": "Nuestra tecnología de OCR AI garantiza que obtengas datos precisos de tus documentos, independientemente del tipo de documento que estés procesando.",
-    "without": "Sin nuestra solución",
-    "with": "Con nuestra solución",
-    "without1": "Perder tiempo en tareas de entrada de datos y corrección de errores",
-    "without2": "Dificultad para manejar documentos en múltiples idiomas",
-    "without3": "Costoso escalar el procesamiento de documentos con alta eficiencia",
-    "without4": "Escaneos y imágenes de baja calidad que no se pueden extraer",
-    "without5": "No automatizar el procesamiento de documentos",
-    "with1": "Procesar documentos en segundos con OCR AI",
-    "with2": "Obtener datos estructurados extraídos de cualquier documento",
-    "with3": "Ahorrar dinero y tiempo con procesamiento por lotes",
-    "with4": "Detectar fraudes de documentos con tecnología AI",
-    "with5": "Automatizar el procesamiento de documentos"
+    "title": "Nos diferenciamos por entregar",
+    "title-span": "Soluciones Integrales",
+    "title2": "no productos genéricos",
+    "description": "Nuestro enfoque consultivo garantiza que cada solución responda exactamente a tus necesidades específicas, en lugar de adaptar tu negocio a un producto estándar.",
+    "without": "Enfoque tradicional",
+    "with": "Nuestro enfoque consultivo",
+    "without1": "Venta de productos sin entender necesidades reales",
+    "without2": "Soluciones genéricas que requieren adaptación de tu parte",
+    "without3": "Implementación sin acompañamiento ni medición de resultados",
+    "without4": "Enfoque en tecnología, no en procesos de negocio",
+    "without5": "Relaciones transaccionales de corto plazo",
+    "with1": "Diagnóstico profundo antes de proponer soluciones",
+    "with2": "Propuestas 100% personalizadas a tus procesos",
+    "with3": "Acompañamiento continuo y medición de impacto real",
+    "with4": "Enfoque en procesos, potenciado por tecnología",
+    "with5": "Alianzas estratégicas de largo plazo"
   },
   "ReclaimSection": {
-    "title": "Reclama tu tiempo y tu dinero con",
-    "title-span": "OCR AI",
-    "description": "Empoderar tu equipo con extracción de datos automatizada para cualquier flujo de documentos. No más tiempo perdido en entrada de datos.",
-    "button": "Agendar una llamada"
+    "title": "Transforma tu negocio con nuestro",
+    "title-span": "enfoque consultivo",
+    "description": "Potencia la eficiencia de tus equipos, reduce costos operativos y genera nuevas oportunidades de ingresos con soluciones diseñadas específicamente para tus desafíos.",
+    "button": "Conoce más sobre nosotros"
   },
   "LocaleLayout": {
     "title": "next-intl ejemplo"
@@ -70,5 +70,10 @@
     "select-language": "Seleccionar idioma",
     "english": "Inglés",
     "spanish": "Español"
+  },
+  "OCRSection": {
+    "title": "Nuestra metodología: escuchar, analizar y resolver.",
+    "subtitle": "Un proceso estructurado que pone tus necesidades en el centro para entregar resultados tangibles.",
+    "description": "Comenzamos escuchando tus desafíos actuales y analizando tus procesos existentes. Luego, diseñamos una solución a medida que optimiza flujos de trabajo, reduce costos y potencia oportunidades de crecimiento. Implementamos la solución con un acompañamiento continuo, midiendo resultados para garantizar un impacto real y sostenible en tu negocio."
   }
 }
