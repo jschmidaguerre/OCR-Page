@@ -68,7 +68,7 @@ export default function Navigation() {
         className={cn(
           "rounded-2xl py-1 transition-all duration-300 backdrop-blur-sm",
           scrolled 
-            ? "bg-emerald-600/80 text-white shadow-lg border border-gray-200" 
+            ? "bg-blue-600/80 text-white shadow-lg border border-gray-200" 
             : "bg-white/90 text-gray-900 borderborder-gray-200",
           isOpen && "rounded-3xl" // Expand when menu is open
         )}
@@ -190,71 +190,6 @@ export default function Navigation() {
           </div>
         )}
       </header>
-
-      <div className="absolute right-4 top-3 z-50 language-dropdown">
-        <button 
-          onClick={toggleLanguageMenu}
-          className={cn(
-            "flex items-center space-x-1 px-3 py-3 rounded-lg text-base transition-colors shadow-md",
-            scrolled 
-              ? "bg-emerald-600/80 text-white" 
-              : "bg-white/90 text-gray-900 border border-gray-200"
-          )}
-          aria-expanded={languageMenuOpen}
-          aria-haspopup="true"
-        >
-          <span className="text-lg mr-1" role="img" aria-label={locale === 'es' ? "Bandera de España" : "USA Flag"}>
-            {locale === 'es'
-              ? <Image src="/es.png" alt="Bandera de España" width={20} height={20} />
-              : <Image src="/us.png" alt="USA Flag" width={20} height={20} /> 
-              }
-          </span>
-          <ChevronDown className="h-4 w-4" />
-        </button>
-
-        {/* Language Dropdown Menu */}
-        {languageMenuOpen && (
-          <div className={cn(
-            "absolute right-0 mt-1 w-40 rounded-xl overflow-hidden shadow-lg z-50 transition-all",
-            scrolled 
-              ? "bg-emerald-600/80" 
-              : "bg-white border border-gray-200"
-          )}>
-            <div className="py-1">
-              <button
-                className={cn(
-                  "flex items-center w-full px-4 py-2 text-base",
-                  locale === 'es' && (scrolled ? "bg-white/10" : "bg-gray-100"),
-                  scrolled 
-                    ? "hover:bg-white/20" 
-                    : "hover:bg-gray-100"
-                )}
-                onClick={() => changeLanguage('es')}
-              >
-                <span className="text-lg mr-2" role="img" aria-label="Bandera de España">
-                  <Image src="/es.png" alt="Bandera de España" width={20} height={20} />
-                </span>
-                Español
-              </button>
-              <button
-                className={cn(
-                  "flex items-center w-full px-4 py-2 text-base",
-                  locale === 'en' && (scrolled ? "bg-emerald-600/80" : "bg-gray-100"),
-                  scrolled 
-                    ? "hover:bg-white/20" 
-                    : "hover:bg-gray-100"
-                )}
-                onClick={() => changeLanguage('en')}
-              >
-                <span className="text-lg mr-2" role="img" aria-label="USA Flag">
-                  <Image src="/us.png" alt="USA Flag" width={20} height={20} />
-                </span>
-                English
-              </button>
-            </div>
-          </div>
-        )}
-      </div>
 
     </div>
   )
