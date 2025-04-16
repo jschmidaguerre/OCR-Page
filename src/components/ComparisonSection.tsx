@@ -22,7 +22,7 @@ export default function ComparisonSection() {
   ]
 
   return (
-    <section className="py-24 bg-gradient-to-b from-white to-slate-50 relative overflow-hidden">
+    <section className="py-24 bg-gradient-to-b from-white to-slate-50 relative overflow-hidden" id="comparison">
       <div className="container mx-auto px-4 pt-10">
         <div className="mb-16 max-w-3xl mx-auto text-center">
           <h2 className="mb-6 text-4xl font-bold leading-tight">

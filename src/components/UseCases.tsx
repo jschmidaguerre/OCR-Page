@@ -191,10 +191,16 @@ export default function UseCases() {
             Nuestra experiencia técnica y enfoque consultivo nos permite entender a fondo los desafíos únicos de tu empresa.
             Conversemos sobre cómo podemos aplicar tecnologías innovadoras para optimizar tus procesos críticos.
           </p>
-          <Button size="lg" className="bg-blue-600 hover:bg-blue-700 text-white">
-            Conversemos sobre tu negocio
-            <ChevronRight size={16} className="ml-2" />
-          </Button>
+          <a 
+            href="https://mail.google.com/mail/?view=cm&fs=1&to=bautipriano@gmail.com&cc=juanseaguerre@gmail.com&su=Consulta%20de%20servicios&body=Hola%2C%0A%0AMe%20gustar%C3%ADa%20obtener%20m%C3%A1s%20informaci%C3%B3n%20sobre%20sus%20servicios.%20%0A%0APor%20favor%20cont%C3%A1ctenme%20para%20coordinar%20una%20reuni%C3%B3n.%0A%0AGracias%2C%0A%0A" 
+            target="_blank" 
+            rel="noopener noreferrer"
+          >
+            <Button size="lg" className="bg-blue-600 hover:bg-blue-700 text-white">
+              Conversemos sobre tu negocio
+              <ChevronRight size={16} className="ml-2" />
+            </Button>
+          </a>
         </div>
       </div>
     </section>

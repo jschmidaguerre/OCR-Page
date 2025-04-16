@@ -49,15 +49,14 @@ export default function Navigation() {
     setIsOpen(!isOpen)
   }
 
-  const toggleLanguageMenu = () => {
-    setLanguageMenuOpen(!languageMenuOpen)
-  }
-
-  const changeLanguage = (newLocale) => {
-    // Assuming you have a route system that supports locale prefixes
-    const newPath = pathname.replace(`/${locale}`, `/${newLocale}`);
-    router.push(newPath);
-    setLanguageMenuOpen(false);
+  // Función para manejar el scroll a secciones específicas
+  const scrollToSection = (sectionId, event) => {
+    event.preventDefault();
+    const section = document.getElementById(sectionId);
+    if (section) {
+      section.scrollIntoView({ behavior: 'smooth' });
+      setIsOpen(false); // Cerrar el menú móvil después del clic
+    }
   }
 
   return (
@@ -76,17 +75,19 @@ export default function Navigation() {
         <nav className="flex items-center h-14 px-6 relative mx-auto max-w-screen-xl w-full">
           {/* Desktop Menu */}
           <div className="hidden md:flex items-center gap-3 mx-auto">
-            <Link
-              href="/product"
+            <a
+              href="#home"
+              onClick={(e) => scrollToSection('home', e)}
               className={cn(
                 "py-1.5 rounded-full text-3xl font-bold mr-96"
               )}
             >
               spom
-            </Link>
+            </a>
 
-            <Link
-              href="/product"
+            <a
+              href="#value"
+              onClick={(e) => scrollToSection('benefits', e)}
               className={cn(
                 "px-3 py-1.5 rounded-full text-lg transition-colors",
                 scrolled 
@@ -95,9 +96,10 @@ export default function Navigation() {
               )}
             >
               {t('product')}
-            </Link>
-            <Link
-              href="/#usecases"
+            </a>
+            <a
+              href="#solutions"
+              onClick={(e) => scrollToSection('industries', e)}
               className={cn(
                 "px-3 py-1.5 rounded-full text-lg transition-colors",
                 scrolled 
@@ -106,9 +108,10 @@ export default function Navigation() {
               )}
             >
               {t('use-cases')}
-            </Link>
-            <Link
-              href="/pricing"
+            </a>
+            <a
+              href="#comparison"
+              onClick={(e) => scrollToSection('comparison', e)}
               className={cn(
                 "px-3 py-1.5 rounded-full text-lg transition-colors",
                 scrolled 
@@ -117,19 +120,23 @@ export default function Navigation() {
               )}
             >
               {t('pricing')}
-            </Link>
+            </a>
           </div>
 
           {/* Request Demo & Mobile Menu */}
           <div className="flex items-center ml-auto">
-            <Link href="/booking">
-              <Button 
-                size="lg" 
-                className="bg-[#f38240] hover:bg-[#dd7335] text-lg rounded-lg ml-5"
-              >
-                {t('request-demo')}
-              </Button>
-            </Link>
+          <a 
+            href="https://mail.google.com/mail/?view=cm&fs=1&to=bautipriano@gmail.com&cc=juanseaguerre@gmail.com&su=Consulta%20de%20servicios&body=Hola%2C%0A%0AMe%20gustar%C3%ADa%20obtener%20m%C3%A1s%20informaci%C3%B3n%20sobre%20sus%20servicios.%20%0A%0APor%20favor%20cont%C3%A1ctenme%20para%20coordinar%20una%20reuni%C3%B3n.%0A%0AGracias%2C%0A%0A" 
+            target="_blank" 
+            rel="noopener noreferrer"
+          >
+            <Button 
+              size="lg" 
+              className="bg-[#f38240] hover:bg-[#dd7335] text-lg rounded-lg ml-5"
+            >
+              {t('request-demo')}
+            </Button>
+          </a>
 
             {/* Hamburger Button (Mobile Only) */}
             <button
@@ -150,42 +157,55 @@ export default function Navigation() {
         {isOpen && (
           <div className="md:hidden px-6 pb-4 pt-0">
             <div className="flex flex-col space-y-1">
-              <Link
-                href="/product"
+              <a
+                href="#product"
+                onClick={(e) => scrollToSection('product', e)}
                 className={cn(
                   "px-3 py-2 rounded-full text-base transition-colors",
                   scrolled 
                     ? "hover:bg-white/20" 
                     : "hover:bg-gray-100"
                 )}
-                onClick={toggleMenu}
               >
                 {t('product')}
-              </Link>
-              <Link
-                href="/#usecases"
+              </a>
+              <a
+                href="#usecases"
+                onClick={(e) => scrollToSection('usecases', e)}
                 className={cn(
                   "px-3 py-2 rounded-full text-base transition-colors",
                   scrolled 
                     ? "hover:bg-white/20" 
                     : "hover:bg-gray-100"
                 )}
-                onClick={toggleMenu}
               >
                 {t('use-cases')}
-              </Link>
-              <Link
-                href="/pricing"
+              </a>
+              <a
+                href="#comparison"
+                onClick={(e) => scrollToSection('comparison', e)}
                 className={cn(
                   "px-3 py-2 rounded-full text-base transition-colors", 
                   scrolled 
                     ? "hover:bg-white/20" 
                     : "hover:bg-gray-100"
                 )}
-                onClick={toggleMenu}
               >
                 {t('pricing')}
-              </Link>
+              </a>
+              <a
+                href="https://mail.google.com/mail/?view=cm&fs=1&to=bautipriano@gmail.com&cc=juanseaguerre@gmail.com&su=Consulta%20de%20servicios&body=Hola%2C%0A%0AMe%20gustar%C3%ADa%20obtener%20m%C3%A1s%20informaci%C3%B3n%20sobre%20sus%20servicios.%20%0A%0APor%20favor%20cont%C3%A1ctenme%20para%20coordinar%20una%20reuni%C3%B3n.%0A%0AGracias%2C%0A%0A"
+                target="_blank"
+                rel="noopener noreferrer"
+                className={cn(
+                  "px-3 py-2 rounded-full text-base transition-colors", 
+                  scrolled 
+                    ? "hover:bg-white/20" 
+                    : "hover:bg-gray-100"
+                )}
+              >
+                {t('request-demo')}
+              </a>
             </div>
           </div>
         )}

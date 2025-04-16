@@ -1,8 +1,8 @@
 {
   "NavigationMenu": {
-    "product": "Metodología",
-    "use-cases": "Industrias",
-    "pricing": "Proceso",
+    "product": "Propuesta",
+    "use-cases": "Proyectos",
+    "pricing": "Metodología",
     "request-demo": "Contáctanos"
   },
   "HeroSection": {
@@ -10,7 +10,7 @@
     "title2": "Soluciones a medida para tu negocio.",
     "description": "Escuchamos. Analizamos. Resolvemos. Optimizamos costos y potenciamos ventas.",
     "button": "Contáctanos",
-    "button2": "Conoce nuestra metodología"
+    "button2": "Conoce nuestra propuesta"
   },
   "BenefitsGrid": {
     "title1": "Diagnóstico personalizado de procesos",

@@ -9,7 +9,7 @@ import ReclaimSection from '@/components/ReclaimSection'
 
 export default function Page() {
   return (
-    <div className="flex min-h-screen justify-center flex-col mx-auto">
+    <div className="flex min-h-screen justify-center flex-col mx-auto" id="home">
       <Navigation/>
       <HeroSection />
       <BenefitsGrid />

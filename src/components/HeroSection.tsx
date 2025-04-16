@@ -15,6 +15,8 @@ export default function HeroSection() {
     }
   };
 
+  // Esta función ya no es necesaria porque estamos usando un enlace directo
+
   return (
     <section className="flex flex-col justify-center items-center min-h-screen px-4 pb-20 text-center relative bg-gradient-to-b from-white to-slate-50">
       <div className="max-w-5xl mx-auto">
@@ -38,16 +40,30 @@ export default function HeroSection() {
         </p>
 
         <div className="flex flex-col items-center justify-center gap-8 mt-10 sm:flex-row">  
-          <Link href="#contacto" className="w-full sm:w-auto">
-            <Button 
-              size="lg" 
-              className="w-full sm:w-[280px] text-xl bg-blue-600 hover:bg-blue-700 px-8 py-7 shadow-lg"
-            >
-              Contáctanos
-            </Button>
-          </Link>
+        <a 
+          href="https://mail.google.com/mail/?view=cm&fs=1&to=bautipriano@gmail.com&cc=juanseaguerre@gmail.com&su=Consulta%20de%20servicios&body=Hola%2C%0A%0AMe%20gustar%C3%ADa%20obtener%20m%C3%A1s%20informaci%C3%B3n%20sobre%20sus%20servicios.%20%0A%0APor%20favor%20cont%C3%A1ctenme%20para%20coordinar%20una%20reuni%C3%B3n.%0A%0AGracias%2C%0A%0A" 
+          target="_blank" 
+          rel="noopener noreferrer"
+          className="w-full sm:w-auto"
+        >
+          <Button 
+            size="lg" 
+            className="w-full sm:w-[280px] text-xl bg-blue-600 hover:bg-blue-700 px-8 py-7 shadow-lg"
+          >
+            Contáctanos
+          </Button>
+        </a>
 
-          <Link href="#methodology-section" className="w-full sm:w-auto">
+          <a 
+            href="#benefits"
+            onClick={(e) => {
+              e.preventDefault();
+              const section = document.getElementById('benefits');
+              if (section) {
+                section.scrollIntoView({ behavior: 'smooth' });
+              }
+            }}
+          >
             <Button 
               size="lg" 
               variant="outline" 
@@ -55,7 +71,7 @@ export default function HeroSection() {
             >
               {t('button2')}
             </Button>
-          </Link>
+          </a>
         </div>
       </div>
       
