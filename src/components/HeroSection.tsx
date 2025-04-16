@@ -9,7 +9,7 @@ export default function HeroSection() {
   const t = useTranslations('HeroSection');
 
   const scrollToNextSection = () => {
-    const nextSection = document.querySelector('#methodology-section');
+    const nextSection = document.querySelector('#benefits');
     if (nextSection) {
       nextSection.scrollIntoView({ behavior: 'smooth' });
     }
