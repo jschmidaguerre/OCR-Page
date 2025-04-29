@@ -1,14 +1,18 @@
-"use client";
+// app/[locale]/booking/CalendlyWidget.tsx
 
-import { InlineWidget } from 'react-calendly';
+'use client';
 
-export default function CalendlyWidget() {
+interface CalendlyWidgetProps {
+  locale: string;
+}
+
+export default function CalendlyWidget({ locale }: CalendlyWidgetProps) {
+  // Aquí construyes tu embed de Calendly según el locale recibido
   return (
-    <div className="mx-auto max-w-3xl">
-      <InlineWidget
-        url="https://calendly.com/juanseaguerre/30min"
-        styles={{ height: '700px' }}
-      />
-    </div>
+    <div
+      className="calendly-inline-widget"
+      data-url={`https://calendly.com/tu-usuario/demo?locale=${locale}`}
+      style={{ minWidth: '320px', height: '630px' }}
+    />
   );
 }
