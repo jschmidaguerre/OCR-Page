@@ -1,11 +1,12 @@
 // app/[locale]/booking/page.tsx
 
+// 1) Forzamos que sea siempre dinámico (SSR), no SSG:
+export const dynamic = "force-dynamic";
+
 import Navigation from '@/components/Navigation';
 import ReclaimSection from '@/components/ReclaimSection';
 import CalendlyWidget from './CalendlyWidget';
 import { routing } from '@/i18n/routing';
-
-export const dynamicParams = false;
 
 export async function generateStaticParams() {
   return routing.locales.map((locale) => ({
@@ -32,9 +33,8 @@ export default function BookingPage({ params: { locale } }: BookingPageProps) {
           </p>
         </div>
 
-        {/* Calendly embed, recibiendo el locale como prop */}
+        {/* Calendly embed – sin usar headers(), recibe el locale */}
         <CalendlyWidget locale={locale} />
-
       </div>
 
       <ReclaimSection />
