@@ -4,7 +4,6 @@ const withNextIntl = createNextIntlPlugin();
 
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  output: 'export' as const,
   images: { unoptimized: true },
   basePath: '/OCR-Page',
   assetPrefix: '/OCR-Page',
