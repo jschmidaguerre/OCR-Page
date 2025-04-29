@@ -1,5 +1,4 @@
 // app/[locale]/booking/CalendlyWidget.tsx
-
 'use client';
 
 interface CalendlyWidgetProps {
@@ -7,7 +6,6 @@ interface CalendlyWidgetProps {
 }
 
 export default function CalendlyWidget({ locale }: CalendlyWidgetProps) {
-  // Aquí construyes tu embed de Calendly según el locale recibido
   return (
     <div
       className="calendly-inline-widget"
