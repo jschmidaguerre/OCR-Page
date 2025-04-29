@@ -1,13 +1,9 @@
-import Image from 'next/image';
-import { useTranslations } from 'next-intl';
 import { Card } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
 import { Check, ChevronRight, FileText, Edit, Package, Stethoscope } from 'lucide-react';
 
-export default function UseCases() {
-  const t = useTranslations('UseCases');
-  
+export default function UseCases() {  
   // Structured data for our services
   const ourServices = [
     {

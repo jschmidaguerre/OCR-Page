@@ -1,7 +1,7 @@
 import { Card } from '@/components/ui/card'
-import { Check, X, ArrowRight, Calendar, Users, Zap, BadgeCheck } from 'lucide-react'
+import { Check, X, ArrowRight, Calendar, Users, Zap} from 'lucide-react'
 import { useTranslations } from 'next-intl'
-import { Button } from '@/components/ui/button'
+
 
 export default function ComparisonSection() {
   const t = useTranslations('ComparisonSection')

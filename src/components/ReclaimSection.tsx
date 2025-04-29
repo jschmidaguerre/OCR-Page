@@ -1,5 +1,4 @@
 import { Button } from '@/components/ui/button'
-import Link from 'next/link'
 import { useTranslations } from 'next-intl'
 import { Mail } from 'lucide-react'
 

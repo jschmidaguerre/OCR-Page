@@ -1,10 +1,16 @@
-// app/product/page.tsx (Next.js 13)
-// or pages/product.tsx (Next.js 12)
-
 import Navigation from "@/components/Navigation";
 import ReclaimSection from "@/components/ReclaimSection";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
+import { routing } from "@/i18n/routing"; // 👈 Importar locales para exportar rutas
+import Image from 'next/image';
+
+// 👇 Esta función es requerida para rutas dinámicas con export estático
+export async function generateStaticParams() {
+  return routing.locales.map((locale) => ({
+    locale,
+  }));
+}
 
 export default function ProductPage() {
   return (
@@ -34,9 +40,11 @@ export default function ProductPage() {
 
           {/* Right: OCR Image */}
           <div className="flex justify-center md:w-1/2">
-            <img
+          <Image
               src="/Wavy_Edu-01_Single-06.jpg"
               alt="OCR processing illustration"
+              width={400} // o el tamaño real de tu imagen
+              height={400} // lo mismo
               className="h-auto w-full max-w-sm object-contain"
             />
           </div>
