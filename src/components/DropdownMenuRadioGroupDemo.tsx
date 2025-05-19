@@ -1,58 +1,61 @@
-"use client"
+'use client'
 
-import { useEffect, useState } from "react"
-import { useRouter, usePathname } from "next/navigation"
-import { Button } from "@/components/ui/button"
+import { useState } from 'react'
+import { Button } from '@/components/ui/button'
 import {
   DropdownMenu,
+  DropdownMenuTrigger,
   DropdownMenuContent,
   DropdownMenuLabel,
-  DropdownMenuRadioGroup,
-  DropdownMenuRadioItem,
   DropdownMenuSeparator,
-  DropdownMenuTrigger,
-} from "@/components/ui/dropdown-menu"
-import { useTranslations } from "next-intl"
+} from '@/components/ui/dropdown-menu'
 
-export function DropdownMenuRadioGroupDemo() {
-  const [position, setPosition] = useState("en") // Estado inicial
-  const t = useTranslations('DropdownMenuRadioGroupDemo')
-  const router = useRouter()
-  const pathname = usePathname()
-
-  // Sincronizamos el estado con el idioma actual de la URL
-  useEffect(() => {
-    const currentLanguage = pathname.split("/")[1] || "en"
-    setPosition(currentLanguage)
-  }, [pathname]) // Ejecuta este efecto cada vez que la ruta cambia
-
-  const handleValueChange = (value: string) => {
-    if (value !== position) {
-      setPosition(value) // Actualiza el estado
-      router.push(`/${value}`) // Navega a la nueva ruta
-    }
-  }
+export default function DropdownMenuDemo() {
+  const [open, setOpen] = useState(false)
 
   return (
-    <DropdownMenu>
+    <DropdownMenu open={open} onOpenChange={setOpen}>
       <DropdownMenuTrigger asChild>
-        <Button variant="outline">{t('select-language')}</Button>
+        <Button variant="outline">Menú</Button>
       </DropdownMenuTrigger>
       <DropdownMenuContent className="w-56">
-        <DropdownMenuLabel>{t('select-language')}</DropdownMenuLabel>
+        <DropdownMenuLabel>Secciones</DropdownMenuLabel>
         <DropdownMenuSeparator />
-        {/* RadioGroup con onValueChange para redirigir */}
-        <DropdownMenuRadioGroup 
-          value={position} 
-          onValueChange={handleValueChange}
+        <a
+          href="#home"
+          className="block px-4 py-2 hover:bg-gray-100"
+          onClick={() => setOpen(false)}
         >
-          <DropdownMenuRadioItem value="en">
-            {t('english')}
-          </DropdownMenuRadioItem>
-          <DropdownMenuRadioItem value="es">
-            {t('spanish')}
-          </DropdownMenuRadioItem>
-        </DropdownMenuRadioGroup>
+          Inicio
+        </a>
+        <a
+          href="#product"
+          className="block px-4 py-2 hover:bg-gray-100"
+          onClick={() => setOpen(false)}
+        >
+          Producto
+        </a>
+        <a
+          href="#usecases"
+          className="block px-4 py-2 hover:bg-gray-100"
+          onClick={() => setOpen(false)}
+        >
+          Casos de uso
+        </a>
+        <a
+          href="#pricing"
+          className="block px-4 py-2 hover:bg-gray-100"
+          onClick={() => setOpen(false)}
+        >
+          Precios
+        </a>
+        <a
+          href="#contacto"
+          className="block px-4 py-2 hover:bg-gray-100"
+          onClick={() => setOpen(false)}
+        >
+          Contacto
+        </a>
       </DropdownMenuContent>
     </DropdownMenu>
   )

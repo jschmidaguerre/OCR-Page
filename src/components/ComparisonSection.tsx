@@ -1,40 +1,46 @@
-import { Card } from '@/components/ui/card'
-import { Check, X, ArrowRight, Calendar, Users, Zap} from 'lucide-react'
-import { useTranslations } from 'next-intl'
+'use client'
 
+import { Card } from '@/components/ui/card'
+import { Check, X, ArrowRight, Calendar, Users, Zap } from 'lucide-react'
 
 export default function ComparisonSection() {
-  const t = useTranslations('ComparisonSection')
   const withoutList = [
-    t('without1'),
-    t('without2'),
-    t('without3'),
-    t('without4'),
-    t('without5'),
+    'Procesos manuales y lentos',
+    'Errores de transcripción frecuentes',
+    'Falta de estandarización de datos',
+    'Visibilidad limitada del progreso',
+    'Dependencia de tareas repetitivas',
   ]
 
   const withList = [
-    t('with1'),
-    t('with2'),
-    t('with3'),
-    t('with4'),
-    t('with5'),
+    'Automatización completa de procesos',
+    'Precisión de datos mejorada',
+    'Estandarización automática de datos',
+    'Visibilidad en tiempo real',
+    'Más tiempo para tareas estratégicas',
   ]
 
   return (
-    <section className="py-24 bg-gradient-to-b from-white to-slate-50 relative overflow-hidden" id="comparison">
+    <section
+      id="comparison"
+      className="py-24 bg-gradient-to-b from-white to-slate-50 relative overflow-hidden"
+    >
       <div className="container mx-auto px-4 pt-10">
+        {/* Título y descripción */}
         <div className="mb-16 max-w-3xl mx-auto text-center">
           <h2 className="mb-6 text-4xl font-bold leading-tight">
-            {t('title')} <span className="text-blue-600 relative">
-              {t('title-span')}
-              <span className="absolute bottom-1 left-0 w-full border-b-4 border-blue-200"></span>
-            </span> {t('title2')}
+            Transforma tu flujo de trabajo{' '}
+            <span className="text-blue-600 relative">
+              Spom
+              <span className="absolute bottom-1 left-0 w-full border-b-4 border-blue-200" />
+            </span>{' '}
+            con eficiencia
           </h2>
           <p className="text-xl text-gray-600 mb-8">
-            {t('description')}
+            Compara los desafíos actuales con los beneficios de usar nuestra solución.
           </p>
-          
+
+          {/* Badges de características */}
           <div className="flex justify-center items-center space-x-10 mb-12">
             <div className="flex items-center space-x-3 bg-blue-50 px-4 py-2 rounded-full">
               <Calendar className="h-5 w-5 text-blue-600" />
@@ -50,20 +56,21 @@ export default function ComparisonSection() {
             </div>
           </div>
         </div>
-        
+
+        {/* Comparación sin/ con */}
         <div className="grid gap-8 md:grid-cols-2 max-w-5xl mx-auto relative">
-          {/* Flecha de conexión entre tarjetas */}
+          {/* Flecha de conexión */}
           <div className="hidden md:flex absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-10">
             <div className="bg-white p-3 rounded-full shadow-lg">
               <ArrowRight className="h-8 w-8 text-blue-600" />
             </div>
           </div>
-          
+
           {/* Tarjeta "Sin nosotros" */}
           <Card className="p-8 border border-red-100 shadow-lg relative overflow-hidden transition-all duration-300 hover:shadow-xl">
-            <div className="absolute top-0 left-0 w-full h-1 bg-red-500"></div>
+            <div className="absolute top-0 left-0 w-full h-1 bg-red-500" />
             <div className="bg-red-50 inline-block px-3 py-1 rounded-full text-red-700 font-medium text-sm mb-4">
-              { t('without') }
+              Sin Spom
             </div>
             <h3 className="mb-6 text-2xl font-bold text-gray-800">Desafíos actuales</h3>
             <ul className="space-y-5">
@@ -77,18 +84,18 @@ export default function ComparisonSection() {
               ))}
             </ul>
           </Card>
-          
+
           {/* Tarjeta "Con nosotros" */}
           <Card className="p-8 border-0 shadow-lg relative overflow-hidden bg-gradient-to-br from-blue-500 to-blue-600 text-white transition-all duration-300 hover:shadow-xl">
             <div className="absolute top-0 right-0 w-24 h-24 transform translate-x-8 -translate-y-8">
-              <div className="w-full h-full bg-blue-400 rounded-full opacity-20"></div>
+              <div className="w-full h-full bg-blue-400 rounded-full opacity-20" />
             </div>
             <div className="absolute bottom-0 left-0 w-32 h-32 transform -translate-x-10 translate-y-10">
-              <div className="w-full h-full bg-blue-400 rounded-full opacity-20"></div>
+              <div className="w-full h-full bg-blue-400 rounded-full opacity-20" />
             </div>
-            
+
             <div className="bg-white/20 backdrop-blur-sm inline-block px-3 py-1 rounded-full text-white font-medium text-sm mb-4">
-              { t('with') }
+              Con Spom
             </div>
             <h3 className="mb-6 text-2xl font-bold">Beneficios inmediatos</h3>
             <ul className="space-y-5 relative z-10">

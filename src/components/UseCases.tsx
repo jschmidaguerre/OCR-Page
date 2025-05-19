@@ -109,7 +109,7 @@ export default function UseCases() {
   ];
 
   return (
-    <section className="py-20 bg-slate-50" id="industries">
+    <section className="py-20 bg-slate-50" id="usecases">
       <div className="container mx-auto px-4">
         {/* Header with enhanced styling */}
         <div className="max-w-3xl mx-auto text-center mb-16">

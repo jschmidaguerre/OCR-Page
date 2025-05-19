@@ -1,32 +1,21 @@
-import { Button } from '@/components/ui/button';
-import { Card } from '@/components/ui/card';
-import Navigation from '@/components/Navigation';
-import ReclaimSection from '@/components/ReclaimSection';
-import { routing } from '@/i18n/routing'; // 👈 Import locales
-
-// 👇 Obligatorio para rutas dinámicas con output: 'export'
-export async function generateStaticParams() {
-  return routing.locales.map((locale) => ({
-    locale,
-  }));
-}
+// src/app/pricing/page.tsx
+import { Button } from "@/components/ui/button";
+import { Card } from "@/components/ui/card";
+import Navigation from "@/components/Navigation";
+import ReclaimSection from "@/components/ReclaimSection";
 
 export default function PricingPage() {
   return (
     <main>
       <Navigation />
       <div className="container mx-auto px-4 my-4">
-        {/* Heading */}
         <div className="mb-12 text-center">
           <h1 className="my-4 text-4xl font-bold">Pricing Plans</h1>
           <p className="mx-auto max-w-2xl text-lg text-gray-600">
             Choose the plan that best suits your needs.
           </p>
         </div>
-
-        {/* Pricing Cards */}
         <div className="grid gap-8 md:grid-cols-3">
-          {/* Starter Plan */}
           <Card className="flex flex-col items-center p-6 text-center">
             <h2 className="mb-2 text-2xl font-bold">Starter</h2>
             <p className="mb-4 text-gray-500">Great for small projects and tests</p>
@@ -38,8 +27,6 @@ export default function PricingPage() {
             </ul>
             <Button className="w-full">Get Started</Button>
           </Card>
-
-          {/* Pro Plan */}
           <Card className="flex flex-col items-center p-6 text-center">
             <h2 className="mb-2 text-2xl font-bold">Pro</h2>
             <p className="mb-4 text-gray-500">Perfect for growing businesses</p>
@@ -51,8 +38,6 @@ export default function PricingPage() {
             </ul>
             <Button className="w-full">Upgrade Now</Button>
           </Card>
-
-          {/* Enterprise Plan */}
           <Card className="flex flex-col items-center p-6 text-center">
             <h2 className="mb-2 text-2xl font-bold">Enterprise</h2>
             <p className="mb-4 text-gray-500">Advanced features for large-scale needs</p>
@@ -68,5 +53,5 @@ export default function PricingPage() {
       </div>
       <ReclaimSection />
     </main>
-  );
+);
 }
