@@ -1,33 +1,42 @@
 // src/app/booking/CalendlyWidget.tsx
-'use client';
+'use client'
 
-import { useEffect } from "react";
+import { useEffect } from 'react'
 
 interface CalendlyWidgetProps {
-  locale?: string;
+  locale?: string
 }
 
-export default function CalendlyWidget({ locale = "es" }: CalendlyWidgetProps) {
-  useEffect(() => {
-    const scriptId = "calendly-widget-script";
-    if (!document.getElementById(scriptId)) {
-      const s = document.createElement("script");
-      s.src = "https://assets.calendly.com/assets/external/widget.js";
-      s.id = scriptId;
-      s.async = true;
-      document.head.appendChild(s);
-    } else {
-      // si ya existe, forzamos la inicialización de cualquier widget nuevo
-      // @ts-expect-error
-      window.Calendly?.initInlineWidgets()
+// Le enseñamos a TS que window.Calendly existe y qué métodos tiene
+declare global {
+  interface Window {
+    Calendly?: {
+      initInlineWidgets: () => void
     }
-  }, []);
+  }
+}
+
+export default function CalendlyWidget({ locale = 'es' }: CalendlyWidgetProps) {
+  useEffect(() => {
+    const scriptId = 'calendly-widget-script'
+
+    if (!document.getElementById(scriptId)) {
+      const script = document.createElement('script')
+      script.src = 'https://assets.calendly.com/assets/external/widget.js'
+      script.id = scriptId
+      script.async = true
+      document.head.appendChild(script)
+    } else if (window.Calendly?.initInlineWidgets) {
+      // Ya tipado, así no necesitamos @ts-expect-error
+      window.Calendly.initInlineWidgets()
+    }
+  }, [])
 
   return (
     <div
       className="calendly-inline-widget"
       data-url={`https://calendly.com/tu-usuario/demo?locale=${locale}`}
-      style={{ minWidth: "320px", height: "630px" }}
+      style={{ minWidth: '320px', height: '630px' }}
     />
-  );
+  )
 }
