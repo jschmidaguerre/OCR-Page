@@ -17,9 +17,9 @@ export default function CalendlyWidget({ locale = "es" }: CalendlyWidgetProps) {
       s.async = true;
       document.head.appendChild(s);
     } else {
-      // reinicializa si el script ya existe
-      // @ts-ignore
-      window.Calendly?.initInlineWidgets();
+      // si ya existe, forzamos la inicialización de cualquier widget nuevo
+      // @ts-expect-error
+      window.Calendly?.initInlineWidgets()
     }
   }, []);
 
